@@ -1,7 +1,11 @@
 let todoBtn=document.querySelector(".input");
 let addBtn=document.querySelector(".button");
 let todoContainer=document.querySelector(".todos-container");
-let todo,todoList=[];
+let localData=JSON.parse(localStorage.getItem("todo"));
+let todo;
+let todoList=localData||[];
+// if(localData)
+//   renderTodoList(todoList);
 function uuid() {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (param) {
       let number = Math.random() * 16 | 0;
@@ -27,6 +31,7 @@ addBtn.addEventListener("click",(e)=>
   // todoContainer.appendChild(para);
   // todoContainer.innerHTML+=`<div><input type="checkbox"><label class="todo">${todo}</label> <button>delete</button></div>`
   renderTodoList(todoList);
+  localStorage.setItem("todo",JSON.stringify(todoList));
   todoBtn.value="";
 }); 
 todoContainer.addEventListener('click',(e)=>
@@ -43,11 +48,12 @@ todoContainer.addEventListener('click',(e)=>
     todoList=todoList.map(todo=>todo.id===key?{...todo,isCompleted:!todo.isCompleted}:todo)
     todoList=todoList.filter(todo=>todo.id!==delTodoKey);
     renderTodoList(todoList);
+    localStorage.setItem("todo",JSON.stringify(todoList));
     // console.log(todoList);
 })
 function renderTodoList(todoList)
 {
-  todoContainer.innerHTML=todoList.map(({id,todo,isCompleted})=>`<div class="relative"><input 
+  todoContainer.innerHTML=todoList.map(({id,todo,isCompleted})=>`<div class="todo relative"><input 
   id="item-${id}" type="checkbox" data-key=${id} ${isCompleted?"checked":""}><label class="todo todo-text t-pointer 
   ${isCompleted?"checked-todo":""}" for="item-${id}" data-key="${id}">
   ${todo}</label> <button class="absolute right-0 button cursor"> 
