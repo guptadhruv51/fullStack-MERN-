@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>JS Series</h1>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+</body>
+<script>
+
+//   const start=setInterval(function()
+// {
+//   console.log("Dhruv");
+// },1000);
+let start;
+const startEvent=function()
+{
+  start=setInterval(()=>
+{
+  console.log("Dhruv Gupta");
+},1000);
+}
+document.querySelector("#start").addEventListener('click',startEvent,false);
+document.querySelector("#stop").addEventListener('click',()=>
+{
+  clearInterval(start);
+},false);
+
+</script>
+</html>
