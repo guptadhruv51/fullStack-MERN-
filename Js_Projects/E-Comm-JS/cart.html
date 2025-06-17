@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Gupta Store</title>
+  <title>Cart | Gupta Store</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
 </head>
 <body>
   <header class="heading d-flex grow-shrink-basis align-center fixed top-0 left-0">
     <div class="heading-title-icon d-flex  align-center">
         
         <h1 class="heading-title">
-            <a class="link" href="#">Gupta Store</a>
+            <a class="link" href="index.html">Gupta Store</a>
         </h1>
     </div>
     <div class="search-box-container relative">
@@ -33,7 +32,7 @@
                   </span></a>
             </li>
             <li class="list-item-inline">
-                <a href="cart.html" class="link cursor gap-sm"><span class="nav-icon material-icons-outlined">
+                <a href="#" class="link cursor gap-sm"><span class="nav-icon material-icons-outlined">
                   shopping_cart
                   </span></a>
             </li>
@@ -41,8 +40,10 @@
         </ul>
     </nav>
 </header>
-  <div class="products-page d-flex wrap gap" id="products"></div>
-  
-  <script type="module" src="index.js"></script>
+<main class="main">
+<h2 class="heading-2">Your Cart</h2>
+<div class="products-page d-flex wrap gap" id="cart"></div>
+</main>
+<script type="module" src="cart.js"></script>
 </body>
 </html>
