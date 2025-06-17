@@ -114,3 +114,10 @@
 .gap-sm{
   gap:8px
 }
+
+/* .heading{
+  background-color: var(--background-color);
+  padding: 1rem 3rem;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--accent-color);
+} */
