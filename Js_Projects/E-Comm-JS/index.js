@@ -4,7 +4,7 @@ import { findProductIncart } from "./utils/findProductInCart.js";
 let cart=JSON.parse(localStorage.getItem("cart"))||[];
 console.log(products);
 const productContainer=document.getElementById("products");
-
+const filterContainer=document.querySelector(".side-bar");
 
 productContainer.addEventListener("click",
   (e)=>
@@ -24,4 +24,14 @@ productContainer.addEventListener("click",
     
   }
 )
+filterContainer.addEventListener("click",(event)=>
+{   
+  console.log(event.target.dataset.rating)
+  const updatedProducts=products.filter(({rating})=> rating>=Number(event.target.dataset.rating));
+  productContainer.innerHTML="";
+  createProductCard(updatedProducts,productContainer,findProductIncart,"products");
+
+})
+
+
 createProductCard(products,productContainer,findProductIncart,"products");

@@ -22,10 +22,10 @@ for(let product of products)
     cardDescription.appendChild(cardDes);
     const cardPrice=document.createElement("p");
     cardPrice.classList.add("card-price");
-    cardPrice.innerText=product.newPrice;
+    cardPrice.innerText=`Rs.${product.newPrice}`;
     const discPrice=document.createElement("span");
     discPrice.classList.add("price-strike-through","padding-all-8");
-    discPrice.innerText=product.oldPrice;
+    discPrice.innerText=`Rs.${product.oldPrice}`;
     cardPrice.appendChild(discPrice);
     const discount=document.createElement("span");
     discount.classList.add("discount","padding-all-8");
