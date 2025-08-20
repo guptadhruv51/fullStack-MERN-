@@ -1,0 +1,452 @@
+[
+  {
+    "rank": 1,
+    "imdbId": "tt0111161",
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "rating": 9.3,
+    "imdbUrl": "https://www.imdb.com/title/tt0111161/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 2,
+    "imdbId": "tt0068646",
+    "title": "The Godfather",
+    "year": 1972,
+    "rating": 9.2,
+    "imdbUrl": "https://www.imdb.com/title/tt0068646/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 3,
+    "imdbId": "tt0468569",
+    "title": "The Dark Knight",
+    "year": 2008,
+    "rating": 9.0,
+    "imdbUrl": "https://www.imdb.com/title/tt0468569/",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg"
+  },
+  {
+    "rank": 4,
+    "imdbId": "tt0071562",
+    "title": "The Godfather: Part II",
+    "year": 1974,
+    "rating": 9.0,
+    "imdbUrl": "https://www.imdb.com/title/tt0071562/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 5,
+    "imdbId": "tt0050083",
+    "title": "12 Angry Men",
+    "year": 1957,
+    "rating": 9.0,
+    "imdbUrl": "https://www.imdb.com/title/tt0050083/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 6,
+    "imdbId": "tt0108052",
+    "title": "Schindler's List",
+    "year": 1993,
+    "rating": 9.0,
+    "imdbUrl": "https://www.imdb.com/title/tt0108052/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 7,
+    "imdbId": "tt0167260",
+    "title": "The Lord of the Rings: The Return of the King",
+    "year": 2003,
+    "rating": 9.0,
+    "imdbUrl": "https://www.imdb.com/title/tt0167260/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 8,
+    "imdbId": "tt0110912",
+    "title": "Pulp Fiction",
+    "year": 1994,
+    "rating": 8.9,
+    "imdbUrl": "https://www.imdb.com/title/tt0110912/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 9,
+    "imdbId": "tt0060196",
+    "title": "The Good, the Bad and the Ugly",
+    "year": 1966,
+    "rating": 8.8,
+    "imdbUrl": "https://www.imdb.com/title/tt0060196/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 10,
+    "imdbId": "tt0120737",
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": 2001,
+    "rating": 8.8,
+    "imdbUrl": "https://www.imdb.com/title/tt0120737/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 11,
+    "imdbId": "tt000011",
+    "title": "Sample Movie 11",
+    "year": 2011,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000011/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 12,
+    "imdbId": "tt000012",
+    "title": "Sample Movie 12",
+    "year": 2012,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000012/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 13,
+    "imdbId": "tt000013",
+    "title": "Sample Movie 13",
+    "year": 2013,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000013/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 14,
+    "imdbId": "tt000014",
+    "title": "Sample Movie 14",
+    "year": 2014,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000014/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 15,
+    "imdbId": "tt000015",
+    "title": "Sample Movie 15",
+    "year": 2015,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000015/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 16,
+    "imdbId": "tt000016",
+    "title": "Sample Movie 16",
+    "year": 2016,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000016/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 17,
+    "imdbId": "tt000017",
+    "title": "Sample Movie 17",
+    "year": 2017,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000017/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 18,
+    "imdbId": "tt000018",
+    "title": "Sample Movie 18",
+    "year": 2018,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000018/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 19,
+    "imdbId": "tt000019",
+    "title": "Sample Movie 19",
+    "year": 2019,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000019/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 20,
+    "imdbId": "tt000020",
+    "title": "Sample Movie 20",
+    "year": 2000,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000020/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 21,
+    "imdbId": "tt000021",
+    "title": "Sample Movie 21",
+    "year": 2001,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000021/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 22,
+    "imdbId": "tt000022",
+    "title": "Sample Movie 22",
+    "year": 2002,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000022/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 23,
+    "imdbId": "tt000023",
+    "title": "Sample Movie 23",
+    "year": 2003,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000023/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 24,
+    "imdbId": "tt000024",
+    "title": "Sample Movie 24",
+    "year": 2004,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000024/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 25,
+    "imdbId": "tt000025",
+    "title": "Sample Movie 25",
+    "year": 2005,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000025/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 26,
+    "imdbId": "tt000026",
+    "title": "Sample Movie 26",
+    "year": 2006,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000026/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 27,
+    "imdbId": "tt000027",
+    "title": "Sample Movie 27",
+    "year": 2007,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000027/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 28,
+    "imdbId": "tt000028",
+    "title": "Sample Movie 28",
+    "year": 2008,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000028/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 29,
+    "imdbId": "tt000029",
+    "title": "Sample Movie 29",
+    "year": 2009,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000029/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 30,
+    "imdbId": "tt000030",
+    "title": "Sample Movie 30",
+    "year": 2010,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000030/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 31,
+    "imdbId": "tt000031",
+    "title": "Sample Movie 31",
+    "year": 2011,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000031/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 32,
+    "imdbId": "tt000032",
+    "title": "Sample Movie 32",
+    "year": 2012,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000032/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 33,
+    "imdbId": "tt000033",
+    "title": "Sample Movie 33",
+    "year": 2013,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000033/",
+    "poster": "https://via.placeholder.com/300x450.png?text=Movie+Poster"
+  },
+  {
+    "rank": 34,
+    "imdbId": "tt000034",
+    "title": "Sample Movie 34",
+    "year": 2014,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000034/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 35,
+    "imdbId": "tt000035",
+    "title": "Sample Movie 35",
+    "year": 2015,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000035/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 36,
+    "imdbId": "tt000036",
+    "title": "Sample Movie 36",
+    "year": 2016,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000036/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 37,
+    "imdbId": "tt000037",
+    "title": "Sample Movie 37",
+    "year": 2017,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000037/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 38,
+    "imdbId": "tt000038",
+    "title": "Sample Movie 38",
+    "year": 2018,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000038/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 39,
+    "imdbId": "tt000039",
+    "title": "Sample Movie 39",
+    "year": 2019,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000039/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 40,
+    "imdbId": "tt000040",
+    "title": "Sample Movie 40",
+    "year": 2000,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000040/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 41,
+    "imdbId": "tt000041",
+    "title": "Sample Movie 41",
+    "year": 2001,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000041/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 42,
+    "imdbId": "tt000042",
+    "title": "Sample Movie 42",
+    "year": 2002,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000042/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 43,
+    "imdbId": "tt000043",
+    "title": "Sample Movie 43",
+    "year": 2003,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000043/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 44,
+    "imdbId": "tt000044",
+    "title": "Sample Movie 44",
+    "year": 2004,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000044/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 45,
+    "imdbId": "tt000045",
+    "title": "Sample Movie 45",
+    "year": 2005,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000045/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 46,
+    "imdbId": "tt000046",
+    "title": "Sample Movie 46",
+    "year": 2006,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000046/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 47,
+    "imdbId": "tt000047",
+    "title": "Sample Movie 47",
+    "year": 2007,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000047/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 48,
+    "imdbId": "tt000048",
+    "title": "Sample Movie 48",
+    "year": 2008,
+    "rating": 8.0,
+    "imdbUrl": "https://www.imdb.com/title/tt000048/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 49,
+    "imdbId": "tt000049",
+    "title": "Sample Movie 49",
+    "year": 2009,
+    "rating": 8.3,
+    "imdbUrl": "https://www.imdb.com/title/tt000049/",
+    "poster": "https://placehold.co/200x300"
+  },
+  {
+    "rank": 50,
+    "imdbId": "tt000050",
+    "title": "Sample Movie 50",
+    "year": 2010,
+    "rating": 8.6,
+    "imdbUrl": "https://www.imdb.com/title/tt000050/",
+    "poster": "https://placehold.co/200x300"
+  }
+]
