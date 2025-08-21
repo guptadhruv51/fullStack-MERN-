@@ -31,10 +31,19 @@ position: fixed;
   font-size: 3rem;
   color: var(--text-color-primary);
 }
-.search-container
+.options
 {
+  display: flex;
+  align-items: center;
   margin-left: auto;
+  gap:10px
+
 }
+/* .search-container
+{
+  
+} */
+
 
 .input
 {
@@ -45,6 +54,21 @@ position: fixed;
   color: var(--text-color-primary);
   font-size: 1.25rem;
   width: 25rem;
+}
+.option
+{
+  background-color: var(--bg-color);
+}
+.rating-select
+{
+  background-color: transparent;
+  color: var(--text-color-primary);
+  border-radius:4px;
+  padding: 8px;
+  font-size: 1.25rem;
+  border: 2px solid var(--card-bg);
+  margin-left: 4px;
+  
 }
 .main {
   display: flex;

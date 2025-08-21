@@ -1,4 +1,9 @@
 const parentElement=document.querySelector(".main")
+const searchInput=document.querySelector(".input");
+const movieRating=document.querySelector(".rating-select");
+let searchValue="";
+let filteredArray=[];
+let ratings=0;
 const FILE_PATH = "./movies.json";
 
 const getMovies = async (filePath) => {
@@ -104,6 +109,59 @@ const createMovieCard=(movies)=>
   parentElement.appendChild(cardContainer);
 
  }
+};
+
+function getFilteredData()
+{
+  
+  filteredArray=searchValue?.length>0?movies.filter(movie=>searchValue===movie.title.toLowerCase()):movies;
+  // createMovieCard(filteredArray);
+  
+  if(ratings>0)
+  {
+      filteredArray=filteredArray.filter(movie=>movie.rating>=ratings);
+
+  }
+  return filteredArray;
 }
+
+function handleSearch(event)
+{
+  searchValue=event.target.value.toLowerCase();
+  let filterBySearch=getFilteredData();
+  console.log(filteredArray);
+  parentElement.innerHTML="";
+  createMovieCard(filterBySearch);
+}
+
+function debounce(callback,delay)
+{
+  let timerID;
+  return (...args)=>
+  {
+    clearTimeout(timerID);
+    timerID=setTimeout(()=>
+    {
+      callback(...args);
+    },delay)
+  }
+}
+
+
+
+
+const debounceInput=debounce(handleSearch,700);
+searchInput.addEventListener("keyup",debounceInput);
+
+function handleRatingSelector(event)
+{
+    ratings=event.target.value;
+    let filterbyRating=getFilteredData();
+    parentElement.innerHTML="";
+  createMovieCard(ratings?filterbyRating:movies);
+
+}
+movieRating.addEventListener("change",handleRatingSelector);
+
 
 createMovieCard(movies);
