@@ -4,7 +4,7 @@ const loginController=async(req,res)=>
   try {
   const {username,password}=req.body;
   const user=await userModel.findUser(username);
-
+  
   if (user.password===password)
   {
     res.status(200);

@@ -4,6 +4,8 @@ const router = require('./router/router');
 const cartRouter = require('./router/cartRouter');
 const userRouter = require('./router/userRouter');
 const app=express();
+// const db_url=require('./dbDetails.js')
+
 // server
 
 // we configure the middleware,request handlers
@@ -13,6 +15,7 @@ const app=express();
 app.use(express.json())
 app.get('/checkserver/:id',(req,res)=>
 {
+  // console.log(db_url);
   console.log(req.path);
   console.log(req.params);
   console.log(req.query)
