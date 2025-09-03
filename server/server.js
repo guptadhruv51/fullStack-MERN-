@@ -1,8 +1,8 @@
 const express=require('express');
+require('./dbConnection.js');
 const router = require('./router/router');
 const cartRouter = require('./router/cartRouter');
 const userRouter = require('./router/userRouter');
-
 const app=express();
 // server
 
