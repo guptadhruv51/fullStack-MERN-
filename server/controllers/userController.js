@@ -1,44 +1,56 @@
 const userModel=require("../models/userModel");
-const loginController=async(req,res)=>
+const { errorCreator, responseCreator } = require("../utils/responsehandler");
+const {generatePassword,verifyPassword}= require("../utils/passwordUtil");
+const { generateToken, verifyToken } = require("../utils/jwtUtils");
+// const errorHandler = require("../utils/errorhandler");
+const loginController=async(req,res,next)=>
 {
   try {
   const {username,password}=req.body;
   const user=await userModel.findUser(username);
   
-  if (user.password===password)
+  if (await verifyPassword(password,user.password))
   {
-    res.status(200);
-    res.send(
-      {
-        success:true,
-        message:"Logged in successfully",
-        data:user,
-      }
-    );
+    const token=generateToken(user);
+     res.status(200);
+    // res.send(
+    //   {
+    //     success:true,
+    //     message:`${username}Logged in successfully`,
+    //     data:user,
+    //   }
+    // );
+    res.send(responseCreator(`${username} Logged in Successfully`,{...user,token}));
   }
   else{
-    res.status(401);
-    res.send(
-      {
-        success:false,
-        message:"Incorrect password !!!"
-      }
-    )
+    // const error=new Error('Incorrect password');
+    // error.status=401;
+    // throw error;
+
+    errorCreator("Incorrect password!!!",401)
+    // res.status(401);
+    // res.send(
+    //   {
+    //     success:false,
+    //     message:"Incorrect password !!!"
+    //   }
+    // )
   }
   
   }
   catch (error) {
-    res.status(error.status);
-    res.send(
-      {
-        success:false,
-        message:error.message
-      }
-    )
+    // res.status(error.status);
+    // res.send(
+    //   {
+    //     success:false,
+    //     message:error.message
+    //   }
+    // )
+    next(error);
   }
 } ;
 
-const signupController= async (req,res)=>
+const signupController= async (req,res,next)=>
 {
 
   const userData=req.body;
@@ -58,8 +70,12 @@ const signupController= async (req,res)=>
   // }
   
   // else{
-    
+    try{
+      
+    const hashedPwd=await generatePassword(userData.password);
+    userData.password=hashedPwd;
     const user=await userModel.create(userData);
+    console.log(user);
     if(user)
     {
     res.status(201);
@@ -70,11 +86,35 @@ const signupController= async (req,res)=>
         data:user
       }
     );
+  }}
+  catch(error)
+  {
+    next(error);
   }
 
 
 
 }
 
+const loginWithToken=async(req,res,next)=>
+{
+  try{
+  const {authorization}=req.headers;
+  //console.log(authorization.split('Bearer')[1].split(' ')[1]);
+  const token=authorization.split('Bearer')[1].split(' ')[1];
+  console.log(token);
+  const {username}=verifyToken(token);
+  if(username)
+  {
+    const user=await userModel.findUser(username);
+    res.send(responseCreator('Logged in successfully!!',user));
+  }
+}
+  catch(error)
+  {
+      next(error);
+  }
 
-module.exports={loginController,signupController};
+}
+
+module.exports={loginController,signupController,loginWithToken};

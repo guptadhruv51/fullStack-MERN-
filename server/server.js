@@ -3,6 +3,7 @@ require('./dbConnection.js');
 const router = require('./router/router');
 const cartRouter = require('./router/cartRouter');
 const userRouter = require('./router/userRouter');
+const errorHandler = require('./utils/errorhandler.js');
 const app=express();
 // const db_url=require('./dbDetails.js')
 
@@ -13,6 +14,7 @@ const app=express();
 
 // enables the server to parse the request body JSON 
 app.use(express.json())
+
 app.get('/checkserver/:id',(req,res)=>
 {
   // console.log(db_url);
@@ -32,7 +34,7 @@ app.get('/checkserver/:id',(req,res)=>
 app.use('/router',router); 
 app.use('/user',userRouter); 
 app.use('/cart',cartRouter); 
-
+app.use(errorHandler);
 //get request
 
 const PORT=4000;
