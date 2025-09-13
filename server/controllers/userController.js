@@ -2,6 +2,7 @@ const userModel=require("../models/userModel");
 const { errorCreator, responseCreator } = require("../utils/responsehandler");
 const {generatePassword,verifyPassword}= require("../utils/passwordUtil");
 const { generateToken, verifyToken } = require("../utils/jwtUtils");
+const { generateQRcode, verifyOTP } = require("../utils/totpUtils");
 // const errorHandler = require("../utils/errorhandler");
 const loginController=async(req,res,next)=>
 {
@@ -20,7 +21,9 @@ const loginController=async(req,res,next)=>
     //     data:user,
     //   }
     // );
-    res.send(responseCreator(`${username} Logged in Successfully`,{...user,token}));
+    res.cookie('authToken',token,{maxAge:3600_000,httpOnly:true})
+    res.send(responseCreator(`${username} Logged in Successfully`,{user}));
+    
   }
   else{
     // const error=new Error('Incorrect password');
@@ -53,7 +56,7 @@ const loginController=async(req,res,next)=>
 const signupController= async (req,res,next)=>
 {
 
-  const userData=req.body;
+  
 
   // const doesUserExist=await userModel.findUser(userData.username);
   // check if user already exists 
@@ -71,21 +74,34 @@ const signupController= async (req,res,next)=>
   
   // else{
     try{
-      
+    const userData=req.body;
+    const username=userData.username;
     const hashedPwd=await generatePassword(userData.password);
     userData.password=hashedPwd;
-    const user=await userModel.create(userData);
+    const {qrcode,secret}=await generateQRcode(username);
+    const user=await userModel.create({...userData,secret});
     console.log(user);
     if(user)
     {
     res.status(201);
+    // res.send(
+    //   {
+    //     success:true,
+    //     message:"user created",
+    //     data:user
+    //   }
+    // );
+
     res.send(
-      {
-        success:true,
-        message:"user created",
-        data:user
-      }
-    );
+      `
+       <section>
+       <body>
+        <h1>Two Factor Auth</h1>
+          <img src="${qrcode}"/>
+        </body>
+        </section>  
+      `
+    )
   }}
   catch(error)
   {
@@ -99,13 +115,15 @@ const signupController= async (req,res,next)=>
 const loginWithToken=async(req,res,next)=>
 {
   try{
-  const {authorization}=req.headers;
+    console.log(req.cookies);
+  const {authToken}=req.cookies;
   //console.log(authorization.split('Bearer')[1].split(' ')[1]);
-  const token=authorization.split('Bearer')[1].split(' ')[1];
-  console.log(token);
-  const {username}=verifyToken(token);
-  if(username)
+  // const token=authorization.split('Bearer')[1].split(' ')[1];
+  //console.log(authToken);
+  const data=verifyToken(authToken);
+  if(data)
   {
+    const {username}=data;
     const user=await userModel.findUser(username);
     res.send(responseCreator('Logged in successfully!!',user));
   }
@@ -117,4 +135,31 @@ const loginWithToken=async(req,res,next)=>
 
 }
 
-module.exports={loginController,signupController,loginWithToken};
+const resetPassword=async(req,res,next)=>
+{
+  try{
+      // console.log("Working")
+      const {username,password,otp}=req.body;
+      const {secret}=await userModel.findUser(username);
+      // console.log("Secret Found")
+      const isVerified=verifyOTP(secret,otp);
+      if(isVerified)
+      {
+          console.log(password);
+          const pwdHash=await generatePassword(password);
+          console.log("Password generated")
+          const message=await userModel.updatePassword(username,pwdHash);
+          res.send(responseCreator(message));
+      }
+      else{
+        errorCreator('Invalid OTP',401);
+      }
+
+    }
+    catch(error)
+    {
+      next(error)
+    }
+}
+
+module.exports={loginController,signupController,loginWithToken,resetPassword};

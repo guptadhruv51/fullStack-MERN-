@@ -1,4 +1,5 @@
 const {sign,verify}=require('jsonwebtoken');
+const { errorCreator } = require('./responsehandler');
 const secretKey='MY_SECRET_KEY';
 const generateToken=(userData,time='1h')=>
 {
@@ -14,6 +15,10 @@ const generateToken=(userData,time='1h')=>
 
 const verifyToken=(token)=>
 {
+  if(!token)
+  {
+    errorCreator("Token Missing, Please Login again",401);
+  }
   return verify(token,secretKey);
 }
 

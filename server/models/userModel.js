@@ -1,4 +1,5 @@
-const {Schema,model}=require('mongoose');
+const { model, Schema } = require('mongoose');
+
 
 const userSchema=new Schema(
   {
@@ -19,6 +20,10 @@ const userSchema=new Schema(
     password:{
       type:String,
       required:[true,"password is mandatory!!"],
+    },
+    secret:{
+      type: String,
+
     },
     cart:
     {
@@ -48,6 +53,44 @@ userSchema.statics.findUser=async(username)=>
     throw err;
   }
   return user;
+
+}
+
+userSchema.statics.addToCart=async(username,product)=>
+{
+
+  const userData=await userModel.findOneAndUpdate(
+    {username},
+    {
+      $push:{cart:{...product,quantity:1}},
+      $inc:{totalCount:1,totalValue:product.price}
+    },
+    {
+      new:true
+    }
+  );
+  return sanitiseUserData(userData);
+
+};
+userSchema.statics.updatePassword=async(username,password)=>
+{
+    const updateData=await userModel.updateOne(
+      {username},
+      {
+      $set:{password}
+      }
+    )
+    console.log("Model working");
+     if(updateData)
+      return `Password updated for ${username} successfully`
+
+}
+
+export const sanitiseUserData=(userData)=>
+{
+  const {secret,password,__v,_id,...data}=userData?.toObject();
+
+  return data;
 
 }
 const userModel=model('users',userSchema);

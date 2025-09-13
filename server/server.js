@@ -1,4 +1,5 @@
 const express=require('express');
+const cookieParser=require('cookie-parser');
 require('./dbConnection.js');
 const router = require('./router/router');
 const cartRouter = require('./router/cartRouter');
@@ -13,7 +14,9 @@ const app=express();
 // app.use();
 
 // enables the server to parse the request body JSON 
-app.use(express.json())
+app.use(cookieParser());
+app.use(express.json());
+
 
 app.get('/checkserver/:id',(req,res)=>
 {
@@ -34,6 +37,7 @@ app.get('/checkserver/:id',(req,res)=>
 app.use('/router',router); 
 app.use('/user',userRouter); 
 app.use('/cart',cartRouter); 
+
 app.use(errorHandler);
 //get request
 
